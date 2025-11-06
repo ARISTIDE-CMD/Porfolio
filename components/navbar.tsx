@@ -16,7 +16,7 @@ const links: NavLink[] = [
     { href: "/about", label: "À propos" },
     { href: "/myProjets", label: "Mes projets" },
     { href: "/competences", label: "Compétences" },
-    { href: "/contactUs", label: "Contact" },
+    { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {

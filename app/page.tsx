@@ -1,65 +1,99 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+// En environnement de rendu non-Next.js, 'next/image' doit être remplacé par 'img'
+// const Image = (props) => <img {...props} />; 
 
-export default function Home() {
+export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Déclenche l'animation après un court délai pour s'assurer que le composant est monté
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  // NOTE: Dans un environnement qui ne supporte pas 'next/image', on utilise une balise <img> standard
+  // const ImageComponent = (props) => <img {...props} className={props.className || ''} src={props.src} alt={props.alt} />;
+
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <section className="relative w-full min-h-screen bg-slate-900 flex items-center justify-center overflow-hidden py-24">
+      
+      {/* 1. Arrière-plan Dynamique (effet de lumière/galaxie) */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+
+      {/* 2. Contenu Principal */}
+      <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+        
+        {/* Texte et Bouton */}
+        <div
+          className={`w-full md:w-1/2 text-center md:text-left transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"
+          }`}
+        >
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+             Développeur en devenir <br/>
+             <span className="text-yellow-400">Passionné par le Web</span>.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          <p className="text-slate-300 text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0">
+            Je suis <strong className="text-yellow-400 font-bold">Aristide</strong>, explorateur du web et du design, prêt à transformer les idées en réalités numériques fonctionnelles et esthétiques.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          <button
+            className={`bg-yellow-400 text-slate-900 font-bold text-lg px-10 py-4 rounded-full shadow-2xl shadow-yellow-500/50 hover:bg-yellow-300 transition-all duration-300 inline-block transform hover:scale-[1.03] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-yellow-400/80 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            } transition-all duration-1000 delay-300`}
+            aria-label="Voir mes projets"
+    
           >
+            <Link href='/myProjets'>Explorer mes Projets</Link>
+          </button>
+        </div>
+
+        {/* Image du Profil */}
+        <div
+          className={`w-full md:w-1/2 flex justify-center md:justify-end transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-16"
+          } transition-all duration-1000 delay-200`}
+        >
+          <div className="relative w-72 h-72 md:w-96 md:h-96">
+            <div className="absolute inset-0 bg-yellow-400 rounded-full transform scale-[1.05] opacity-20 animate-pulse-slow"></div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/assets/images/c9af431cdb9322e4ff4a43af70db96ae.jpg" // Utilisation d'un placeholder pour la runnabilité
+              alt="Image de profil d'Aristide"
+              width={400} 
+              height={400}
+              className="rounded-full object-cover w-full h-full border-4 border-slate-700 shadow-2xl shadow-yellow-500/30 transition-transform duration-700 hover:scale-[1.02]"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+
+      {/* Styles d'animation pour l'arrière-plan */}
+      <style jsx>{`
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        @keyframes blob {
+          0%, 100% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 5s infinite;
+        }
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.2; transform: scale(1.05); }
+          50% { opacity: 0.4; transform: scale(1.02); }
+        }
+      `}</style>
+    </section>
   );
 }

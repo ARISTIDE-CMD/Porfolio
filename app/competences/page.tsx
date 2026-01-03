@@ -119,7 +119,7 @@ export default function Skills() {
             </p>
 
             <div className="inline-block bg-yellow-500 text-slate-900 px-5 py-2 rounded-full font-bold text-sm shadow-md shadow-yellow-500/30">
-              Toujours prêt à construire des solutions performantes 🚀
+              Toujours prêt à construire des solutions performantes 
             </div>
           </div>
         </div>

@@ -31,14 +31,17 @@ export default function Navbar() {
     return (
         // Rendre la barre de navigation sticky et appliquer le style premium sombre
         <nav className="sticky top-0 z-50 bg-slate-900 border-b border-yellow-400/20 shadow-xl shadow-slate-950/50">
-            <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="container mx-auto px-6  flex items-center justify-between">
                 
                 {/* Logo/Branding (Gauche) */}
                 <div className="text-left flex items-center gap-3">
-                    <Code className="text-yellow-400 h-8 w-8" />
+                    {/* <Code className="text-yellow-400 h-8 w-8" /> */}
+                    <Link href="/"  >
+                    <img src="/logo.png" alt="Logo" width={60} height={60} sizes="cover"
+                    /></Link>
                     <div className="leading-none">
-                        <h1 className="text-xl font-bold text-white tracking-wider">KOUANDJA KENFACK</h1>
-                        <h3 className="text-sm font-medium text-slate-400">Aristide Gael - Dev</h3>
+                        <h1 className="text-xl font-bold text-white tracking-wider">ArisDev</h1>
+                        <h3 className="text-sm font-medium text-slate-400">La rigueur au cœur du développement</h3>
                     </div>
                 </div>
 
@@ -87,6 +90,7 @@ export default function Navbar() {
                 className={`fixed inset-0 bg-slate-950/95 backdrop-blur-sm z-40 transition-opacity duration-300 ${
                     isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 } md:hidden`}
+                onClick={()=>setIsOpen(false)}
             >
                 {/* On garde la hauteur pour que l'icône X soit visible en haut (z-50) */}
                 <ul className="flex flex-col items-center justify-center h-full space-y-8 text-xl font-bold">

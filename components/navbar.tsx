@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Code } from 'lucide-react'; // icônes menu, fermer et code
-import Racine from "./racine";
 
 // Définition de l'interface pour les liens de navigation
 interface NavLink {

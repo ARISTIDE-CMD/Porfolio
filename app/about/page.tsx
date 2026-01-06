@@ -52,10 +52,10 @@ export default function About() {
           <div className="flex justify-center md:justify-end mb-25 order-first md:order-last animate-slideRight">
             <div className="relative w-full max-w-sm aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl border-4 border-yellow-400/50">
               <Image
-                src="/human_id.png"
+                src="/manboite.png"
                 alt="Kouandja Kenfack - Profil"
                 layout="fill"
-                // objectFit="cover"
+                objectFit="cover"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent"></div>

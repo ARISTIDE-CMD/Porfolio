@@ -31,14 +31,14 @@ export default function Navbar() {
 
     return (
         // Rendre la barre de navigation sticky et appliquer le style premium sombre
-        <nav className="sticky top-0 z-50 bg-slate-900 border-b border-yellow-400/20 shadow-xl shadow-slate-950/50">
+        <nav className="sticky top-0 z-50 bg-slate-900 border-b  shadow-xl shadow-slate-950/50 -py-3">
             <div className="container mx-auto px-2  flex items-center justify-between">
                 
                 {/* Logo/Branding (Gauche) */}
                 <div className="text-left flex items-center gap-3">
                     {/* <Code className="text-yellow-400 h-8 w-8" /> */}
                     <Link href="/"  >
-                    <img src="/logofinal.png" alt="Logo" width={60} height={60} sizes="cover"
+                    <img src="/logofinal.png" alt="Logo" width={50} height={50} sizes="cover"
                     /></Link>
                     <div className="leading-none">
                         <h1 className="text-xl font-bold text-white tracking-wider">ArisDev</h1>
@@ -56,7 +56,7 @@ export default function Navbar() {
                 </button>
 
                 {/* Menu de navigation (Desktop) */}
-                <ul className="hidden md:flex md:space-x-6 text-sm font-semibold">
+                <ul className="hidden md:flex md:space-x-6 text-xs font-semibold">
                     {links.map((link) => {
                         const isActive = pathname === link.href;
                         return (

@@ -50,7 +50,7 @@ export default function ContactSection() {
         {/* ✅ Formulaire connecté à Formspree */}
         {state.succeeded ? (
           <p className="text-green-400 font-semibold text-lg">
-            ✅ Merci pour ton message ! Je te répondrai bientôt.
+           Merci pour ton message ! Je te répondrai bientôt.
           </p>
         ) : (
           <form

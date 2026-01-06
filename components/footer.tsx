@@ -1,85 +1,136 @@
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+"use client";
+
+import Link from "next/link";
+import { useState, FormEvent, } from "react";
+import { useForm } from "@formspree/react";
+import { Facebook, Instagram, Linkedin, Mail, Github, Youtube, MessageCircle } from "lucide-react";
+
 
 export default function Footer() {
-  return (
-    // Utilisation d'un fond très sombre (slate-950) avec une bordure d'accent jaune
-    <footer className="bg-slate-950 text-gray-300 py-2 px-6 border-t border-yellow-400/20 shadow-inner shadow-slate-950/50">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+  const [email, setEmail] = useState("");
+  const [state, handleSubmit] = useForm("xyzbrllo");
+  // function handleSubscribe(e: FormEvent) {
+  //   e.preventDefault();
+  //   if (!email) return;
+  //   window.location.href = `mailto:aristidegaelkouandjakenfack@gmail.com?subject=Inscription%20newsletter&body=Veuillez%20m'inscrire%20à%20la%20newsletter%20(${encodeURIComponent(
+  //     email
+  //   )})`;
+  //   setEmail("");
+  // }
 
-        {/* Bloc 1 : Nom / identité */}
-        <div className="text-center md:text-left">
-          {/* Nom plus grand et en gras */}
-          <h1 className="text-xl font-bold text-white">KOUANDJA KENFACK</h1>
-          {/* Titre/Prénom en couleur d'accent */}
-          <h3 className="text-md font-medium text-yellow-400">Aristide Gael</h3>
-          <p className="mt-4 text-xs text-gray-500">
-            © {new Date().getFullYear()} Tous droits réservés.
+  return (
+    <footer className="relative overflow-hidden bg-slate-950 text-gray-300">
+      {/* Background image rotative (décoratif) */}
+      <div
+        aria-hidden="true"
+        className="hidden md:block absolute inset-y-0 left-0 w-2/5 transform-gpu opacity-100 filter blur-xl z-0 pointer-events-none spin-slow"
+        style={{
+          backgroundImage: "url('/logofinal.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      {/* Gradient pour améliorer lisibilité du texte */}
+      <div aria-hidden="true" className="hidden md:block absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-slate-950/90 to-transparent z-10 pointer-events-none" />
+
+      <div className="relative z-20 max-w-6xl mx-auto py-10 px-3 md:pl-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* Bloc identité */}
+        <div>
+          <h2 className="text-2xl font-bold text-white">Aristide Gael</h2>
+          <p className="mt-1 text-yellow-400 font-medium">Développeur & architecte du numérique</p>
+          <p className="mt-3 text-sm text-gray-400">
+            Du code à l’architecture, je transforme des idées en solutions web
+            claires, fiables et performantes.
           </p>
         </div>
 
-        {/* Bloc 2 : Réseaux sociaux */}
-        <div className="flex justify-center md:justify-end space-x-6 text-gray-400">
-          {/* Facebook */}
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="p-2 transition-transform duration-300 hover:scale-110 hover:text-[#1877F2]"
-          >
-            <Facebook size={24} />
-          </a>
 
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/680585671"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="p-2 transition-transform duration-300 hover:scale-110 hover:text-[#25D366]"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              className="w-6 h-6 bg-green-800 rounded-full"
+        {/* Bloc navigation */}
+        <nav aria-label="Navigation du site" className="flex flex-col">
+          <h3 className="font-semibold text-white mb-3">Liens rapides</h3>
+          <ul className="space-y-2 text-xs">
+            <li>
+              <Link href="/about" className="text-gray-300 hover:text-yellow-400 transition">À propos</Link>
+            </li>
+            <li>
+              <Link href="/services" className="text-gray-300 hover:text-yellow-400 transition">Services</Link>
+            </li>
+            <li>
+              <Link href="/myProjets" className="text-gray-300 hover:text-yellow-400 transition">Projets</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="text-gray-300 hover:text-yellow-400 transition">Contact</Link>
+            </li>
+            <li>
+              <Link href="/competences" className="text-gray-300 hover:text-yellow-400 transition">Compétences</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Bloc contact & réseaux */}
+        <div>
+          <h3 className="font-semibold text-white mb-3">Contact & réseaux</h3>
+
+          <div className="flex items-center gap-3">
+            <a href="mailto:aristidegaelkouandjakenfack@gmail.com" aria-label="Envoyer un e-mail" className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition">
+              <Mail size={18} className="text-yellow-500" /> <span className="text-sm">aristidegael...@gmail.com</span>
+            </a>
+          </div>
+
+          <div className="mt-4 flex gap-3">
+            <a href="https://www.facebook.com/share/1AitQnWX1n/" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="p-2 rounded hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-blue-500">
+              <Facebook size={17} />
+            </a>
+            <a href="https://instagram.com" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="p-2 rounded hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-purple-500">
+              <Instagram size={17} />
+            </a>
+            <a href="https://www.linkedin.com/in/aristide-gael-kouandja-kenfack-571693287/" title="Linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="p-2 rounded hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-blue-700">
+              <Linkedin size={17} />
+            </a>
+            {/* <a href="https://github.com" aria-label="Github" target="_blank" rel="noopener noreferrer" className="p-2 rounded hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+              <Github size={17} />
+            </a> */}
+            <a
+              href="https://www.youtube.com/@ArisDev"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="YouTube"
+              className="p-2 rounded hover:bg-red-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-red-500"
             >
-              <path d="M20.52 3.48a11.948 11.948 0 0 0-17 0C-1.18 9.14-.21 17.1 4.25 21.08L3 24l3.1-1.04A11.954 11.954 0 0 0 21 7.58a11.954 11.954 0 0 0-.48-4.1zM12 21.4a9.39 9.39 0 0 1-4.77-1.29l-.34-.2-2.84.95.93-2.86-.21-.33A9.41 9.41 0 0 1 2.6 12C2.62 7.03 6.94 2.7 12 2.7c2.52 0 4.9 1 6.7 2.8A9.4 9.4 0 0 1 21.4 12c-.01 5.06-4.34 9.39-9.4 9.4zm5.07-7.53c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.55.12-.16.24-.61.82-.75.99-.13.16-.25.18-.46.06-.21-.12-.89-.34-1.69-1-.63-.55-1.05-1.22-1.17-1.43-.12-.21-.02-.32.09-.44.09-.09.21-.25.31-.37.1-.12.13-.21.21-.36.08-.14.04-.27-.02-.38-.06-.11-.57-1.24-.79-1.69-.21-.44-.43-.37-.55-.38l-.47-.01c-.15 0-.39.06-.6.27-.21.21-.8.75-.8 1.83s.82 2.13.93 2.29c.11.16 1.57 2.34 3.82 3.29.54.23.95.36 1.28.47.54.16 1.01.14 1.39.08.42-.06 1.47-.59 1.68-1.19.21-.59.21-1.09.15-1.2-.06-.11-.21-.16-.46-.28z" />
-            </svg>
-          </a>
+              <Youtube size={17} />
+            </a>
+            <a
+              href="https://wa.me/237680585671" // remplace par ton numéro
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="whatsapp"
+              className="p-2 rounded hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-green-500"
+            >
+              <MessageCircle size={17} />
+            </a>
+          </div>
 
-          {/* Instagram */}
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="p-2 transition-transform duration-300 hover:scale-110 hover:text-[#E4405F]"
-          >
-            <Instagram size={24} />
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/aristide-gael-kouandja-kenfack-571693287/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="p-2 transition-transform duration-300 hover:scale-110 hover:text-[#0A66C2]"
-          >
-            <Linkedin size={24} />
-          </a>
-
-          {/* Email */}
-          <a
-            href="mailto:aristidegaelkouandjakenfack@gmail.com"
-            aria-label="Email"
-            className="p-2 transition-transform duration-300 hover:scale-110 hover:text-[#FFA500]"
-          >
-            <Mail size={24} />
-          </a>
+          <form onSubmit={handleSubmit} className="mt-6">
+            <label htmlFor="newsletter" className="sr-only">Adresse e-mail</label>
+            <div className="flex items-center gap-2">
+              <input id="newsletter" type="email" placeholder="Votre e-mail" className="w-full rounded-md bg-slate-900 border border-slate-800 px-3 py-2 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+              <button type="submit" className="inline-flex items-center gap-2 bg-yellow-400 text-slate-950 px-3 py-2 rounded-md text-sm font-medium hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-yellow-400">S'abonner</button>
+            </div>
+            <p className="mt-2 text-xs text-gray-500">Pas de spam — désabonnement en un clic.</p>
+          </form>
         </div>
+      </div>
 
+      <div className="border-t border-slate-800">
+        <div className="max-w-6xl mx-auto mb-3 px-1 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+          <p className="mt-4 text-xs text-gray-500">© {new Date().getFullYear()} ArisDev. Solutions digitales claires, utiles et orientées résultat.</p>
+          <div className="mt-3 md:mt-0">
+            <a href="/file" className="text-gray-400 hover:text-yellow-400 transition">Mentions légales</a>
+          </div>
+        </div>
       </div>
     </footer>
   );

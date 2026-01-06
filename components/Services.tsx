@@ -80,12 +80,18 @@ export default function Services() {
   }, []);
 
   return (
-    <section ref={ref} className="w-full bg-slate-800 py-16">
+    <section ref={ref} className="w-full bg-slate-900 py-6">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">Mes services digitaux</h2>
-          <p className="text-slate-300 mt-3 max-w-2xl mx-auto">Des solutions claires, efficaces et adaptées à vos besoins</p>
-        </div>
+  <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+    Des services digitaux qui soutiennent votre croissance
+  </h2>
+  <p className="text-slate-300 mt-3 max-w-2xl mx-auto">
+    Des solutions claires et structurées pour transformer vos idées
+    en produits numériques solides.
+  </p>
+</div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, index) => {
@@ -97,7 +103,7 @@ export default function Services() {
                 tabIndex={0}
                 aria-labelledby={id}
                 style={{ animationDelay: inView ? `${index * 120}ms` : '0ms' }}
-                className={`service-card group bg-slate-900 p-6 rounded-xl border border-slate-700/40 shadow-lg hover:scale-[1.02] hover:-translate-y-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400/30 ${inView ? 'is-visible' : ''}`}
+                className={`service-card group bg-slate-900 p-4 rounded-xl border border-slate-700/40 shadow-lg hover:scale-[1.02] hover:-translate-y-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400/30 ${inView ? 'is-visible' : ''}`}
               >
                 <div className="relative h-40 mb-4 overflow-hidden rounded-md bg-slate-800">
                   {/* Utilisation de next/image pour mieux gérer les images statiques */}
@@ -110,15 +116,6 @@ export default function Services() {
                     <h3 className="text-xl font-semibold text-white">{s.title}</h3>
                     <p className="text-slate-300 mt-2">{s.subtitle}</p>
                   </div>
-                </div>
-
-                <div className="mt-4 text-sm text-slate-400">
-                  <strong className="text-yellow-400">Bénéfices :</strong>
-                  <ul className="mt-2 list-disc list-inside">
-                    <li>Solution adaptée à votre activité</li>
-                    <li>Gain de temps et productivité</li>
-                    <li>Expérience client améliorée</li>
-                  </ul>
                 </div>
               </article>
             );

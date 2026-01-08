@@ -16,12 +16,12 @@ export default function HeroSection() {
     <>
       <section className="relative w-full min-h-screen bg-slate-900 flex items-center overflow-hidden">
         {/* Background lights */}
-        <div className="pointer-events-none absolute -top-32 -right-32 w-[28rem] h-[28rem] bg-indigo-500/30 rounded-full blur-3xl animate-blob" />
+        <div className="pointer-events-none absolute -top-22 -right-32 w-[28rem] h-[28rem] bg-indigo-500/30 rounded-full blur-3xl animate-blob" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 w-[28rem] h-[28rem] bg-yellow-400/30 rounded-full blur-3xl animate-blob animation-delay-2000" />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/95 to-slate-900" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-6 py-28 md:py-5 md:b-5 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 container mx-auto px-6 py-28  md:pt-5 md:b-5 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
           {/* Text */}
           <div
@@ -48,7 +48,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/myProjets"
+                href="/services"
                 className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-yellow-400 text-slate-900 font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 shadow-lg shadow-yellow-500/30 hover:scale-[1.03]"
               >
                 Voir nos services

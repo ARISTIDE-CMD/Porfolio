@@ -34,10 +34,10 @@ export default function Footer() {
       {/* Gradient pour améliorer lisibilité du texte */}
       <div aria-hidden="true" className="hidden md:block absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-slate-950/90 to-transparent z-10 pointer-events-none" />
 
-      <div className="relative z-20 max-w-6xl mx-auto py-10 px-3 md:pl-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="relative z-20 max-w-6xl mx-auto py-10 px-3 md:pl-1 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Bloc identité */}
         <div>
-          <h2 className="text-2xl font-bold text-white">ArisDev</h2>
+          <h2 className="text-2xl font-bold text-white">Aris<span className="text-yellow-400">Dev</span></h2>
           <p className="mt-1 text-yellow-400 font-medium">Développeur & architecte du numérique</p>
           <p className="mt-3 text-sm text-gray-400">
             Du code à l’architecture, nous transformons des idées en solutions web

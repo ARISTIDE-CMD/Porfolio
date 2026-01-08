@@ -15,7 +15,7 @@ export default function ProduitsDigitauxPage() {
     <main className="relative overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-top md:bg-center md:bg-fixed filter blur-sm md:blur-none saturate-110"
+        className="absolute inset-0 bg-cover bg-top md:bg-center bg-fixed filter blur-sm md:blur-none saturate-110"
         style={{ backgroundImage: "url('/Delivery/backgroundev.png')", backgroundRepeat: 'no-repeat' }}
       />
       <div className="absolute inset-0 bg-slate-900/70" />
@@ -23,12 +23,12 @@ export default function ProduitsDigitauxPage() {
       <div className="relative z-10 container mx-auto px-6 py-16">
         <header className="max-w-3xl mb-20">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-            Produits digitaux prêts à l’emploi — <span className="text-yellow-400">accélérez vos projets</span>
+            Produits non disponibles pour le moment, laissez nous un message <span className="text-yellow-400">et nous vous reviendrons plus tard</span>
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed">Kits, templates et démonstrateurs pour lancer rapidement des MVPs et prototypes.</p>
+          {/* <p className="text-lg text-slate-300 leading-relaxed">Kits, templates et démonstrateurs pour lancer rapidement des MVPs et prototypes.</p> */}
         </header>
 
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {sampleProducts.map((p) => (
               <Link
@@ -45,7 +45,7 @@ export default function ProduitsDigitauxPage() {
               </Link>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section className="text-center max-w-xl mx-auto">
           <p className="text-slate-300 mb-8 text-lg">Intéressé par l’un des kits ?</p>

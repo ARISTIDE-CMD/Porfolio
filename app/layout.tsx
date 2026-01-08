@@ -7,7 +7,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Arisdev",
-  description: "Plateforme de développement web et mobile.",
+  description: "Solutions digitales claires, utiles et orientées résultat",
   icons: {
     icon: "/logofinal.png",
     apple: "/logofinal.png",

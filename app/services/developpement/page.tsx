@@ -12,7 +12,7 @@ export default function DeveloppementPage() {
       {/* Background */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-top md:bg-center md:bg-fixed filter blur-sm md:blur-none saturate-110 scale-100 md:scale-105"
+        className="absolute inset-0 bg-cover bg-top md:bg-center bg-fixed filter blur-sm md:blur-none saturate-110 scale-100 md:scale-105"
         style={{ backgroundImage: "url('/Delivery/backgroundev.png')", backgroundRepeat: 'no-repeat' }}
       />
       <div className="absolute inset-0 bg-slate-900/70" />
@@ -25,7 +25,7 @@ export default function DeveloppementPage() {
             <span className="text-yellow-400"> numériques solides</span>
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Je conçois et développe des applications web et mobiles
+            Nous conçevons et développons des applications web et mobiles
             structurées, performantes et maintenables, avec une approche
             orientée architecture et évolution à long terme.
           </p>

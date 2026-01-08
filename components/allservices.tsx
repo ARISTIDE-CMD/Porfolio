@@ -86,7 +86,7 @@ export default function ServicesPage() {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
             {/* <Header /> */}
             
-            <main className="container mx-auto px-6 py-6">
+            <main className="container mx-auto px-6 py-4">
                 {/* Hero Section */}
                 <section className="text-center mb-16 animate-fade-in-down">
                     <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">

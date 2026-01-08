@@ -8,7 +8,7 @@ export const metadata = {
 export default function MobilePage() {
   return (
     <main className="relative overflow-hidden">
-      <div aria-hidden="true" className="absolute inset-0 bg-cover bg-top md:bg-center md:bg-fixed filter blur-sm md:blur-none saturate-110" style={{ backgroundImage: "url('/Delivery/applicationmobile.jpg')", backgroundRepeat: 'no-repeat' }} />
+      <div aria-hidden="true" className="absolute inset-0 bg-cover bg-top md:bg-center bg-fixed filter blur-sm md:blur-none saturate-110" style={{ backgroundImage: "url('/Delivery/applicationmobile.jpg')", backgroundRepeat: 'no-repeat' }} />
       <div className="absolute inset-0 bg-slate-900/70" />
 
       <div className="relative z-10 container mx-auto px-6 py-16">

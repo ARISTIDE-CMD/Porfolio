@@ -51,7 +51,7 @@ export default function About() {
             </p>
 
             <a
-              href="/file/Presentation_ArisDev.pdf"
+              href="/présentation.pdf"
               className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold py-3 px-8 rounded-xl transition shadow-xl shadow-yellow-500/30 hover:scale-[1.02]"
             >
               <Download size={20} />

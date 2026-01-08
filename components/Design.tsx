@@ -63,7 +63,7 @@ export default function DesignPage() {
         <section className="text-center max-w-xl mx-auto">
           <p className="text-slate-300 mb-8 text-lg">Besoin d’une interface claire et efficace ?</p>
           <a
-            href={`https://wa.me/?text=${encodeURIComponent("Bonjour, je souhaite discuter de la création d'une interface utilisateur (UX). Pouvez-vous me contacter ?")}`}
+            href={`https://wa.me/237680585671/?text=${encodeURIComponent("Bonjour, je souhaite discuter de la création d'une interface utilisateur (UX). Pouvez-vous me contacter ?")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex cta-animate items-center justify-center px-7 py-3 rounded-lg bg-yellow-400 text-slate-900 font-semibold hover:bg-yellow-300 transition shadow-xl"

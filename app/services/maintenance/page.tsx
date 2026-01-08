@@ -122,7 +122,7 @@ export default function MaintenancePage() {
 
             <div className="flex items-center gap-3">
               <a
-                href={`https://wa.me/?text=${encodeURIComponent("Bonjour, je souhaite un devis pour l'achat de matériel informatique et/ou installation. Pouvez-vous me contacter ?")}`}
+                href={`https://wa.me/237680585671/?text=${encodeURIComponent("Bonjour, je souhaite un devis pour l'achat de matériel informatique et/ou installation. Pouvez-vous me contacter ?")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-green-500 text-white font-semibold hover:bg-green-600 transition"

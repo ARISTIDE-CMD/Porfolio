@@ -87,7 +87,7 @@ export default function WebPage() {
 
                   <div className="mt-6 flex items-center justify-between">
                     <a
-                      href={`https://wa.me/?text=${encodeURIComponent(`Bonjour, je suis intéressé·e par : ${service.title}. Pouvez-vous m'en donner plus d'informations ?`)}`}
+                      href={`https://wa.me/237680585671/?text=${encodeURIComponent(`Bonjour, je suis intéressé·e par : ${service.title}. Pouvez-vous m'en donner plus d'informations ?`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-green-500 text-white font-semibold hover:bg-green-600 transition"

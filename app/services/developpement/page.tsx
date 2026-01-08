@@ -11,7 +11,7 @@ export default function DeveloppementPage() {
     <main className="relative overflow-hidden">
       {/* Background */}
       <div
-        aria-hidden
+        aria-hidden="true"
         className="absolute inset-0 bg-cover bg-top md:bg-center md:bg-fixed filter blur-sm md:blur-none saturate-110 scale-100 md:scale-105"
         style={{ backgroundImage: "url('/Delivery/backgroundev.png')", backgroundRepeat: 'no-repeat' }}
       />
@@ -122,7 +122,7 @@ export default function DeveloppementPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-yellow-400 text-slate-900 font-semibold hover:bg-yellow-300 transition shadow-xl"
+            className="inline-flex cta-animate items-center justify-center px-7 py-3 rounded-lg bg-yellow-400 text-slate-900 font-semibold hover:bg-yellow-300 transition shadow-xl"
           >
             Discutons de votre projet
           </Link>

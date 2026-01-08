@@ -156,7 +156,7 @@ export default function DevAnimated() {
         <p className="text-xl text-slate-300 mb-8">Vous avez un projet ou une idée à structurer ?</p>
         <Link
           href="/contact"
-          className="inline-block px-10 py-5 rounded-full bg-yellow-400 text-slate-900 text-lg font-bold hover:bg-yellow-300 hover:scale-105 transition-all duration-300 shadow-2xl"
+          className="inline-block cta-animate px-10 py-5 rounded-full bg-yellow-400 text-slate-900 text-lg font-bold hover:bg-yellow-300 hover:scale-105 transition-all duration-300 shadow-2xl"
         >
           Discutons de votre projet
         </Link>

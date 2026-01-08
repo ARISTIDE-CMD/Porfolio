@@ -150,7 +150,7 @@ export default function ServicesPage() {
                 <section className="text-center mt-16 animate-fade-in">
                     <Link 
                         href="/contact" 
-                        className="inline-block bg-yellow-400 text-slate-900 font-extrabold text-lg px-10 py-4 rounded-lg shadow-2xl hover:bg-yellow-300 hover:shadow-yellow-400/50 transition-all hover:-translate-y-1"
+                        className="inline-block cta-animate bg-yellow-400 text-slate-900 font-extrabold text-lg px-10 py-4 rounded-lg shadow-2xl hover:bg-yellow-300 hover:shadow-yellow-400/50 transition-all hover:-translate-y-1"
                     >
                         Discutons de votre projet
                     </Link>

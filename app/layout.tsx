@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "arisdev",
+  title: "Arisdev",
   description: "Plateforme de développement web et mobile.",
   icons: {
     icon: "/logofinal.png",

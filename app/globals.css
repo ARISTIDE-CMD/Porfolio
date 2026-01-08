@@ -41,3 +41,30 @@ body {
 .spin-slow {
   animation: spin-slow 120s linear infinite;
 }
+
+/* CTA attention animation (pulse / subtle bounce) */
+@keyframes cta-pulse {
+  0% { transform: translateY(0) scale(1); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+  50% { transform: translateY(-4px) scale(1.02); box-shadow: 0 14px 30px rgba(0,0,0,0.12); }
+  100% { transform: translateY(0) scale(1); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+}
+
+.cta-animate {
+  animation: cta-pulse 2000ms ease-in-out infinite;
+  will-change: transform, box-shadow;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-animate:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cta-animate {
+    animation: none !important;
+    transition: none !important;
+  }
+}

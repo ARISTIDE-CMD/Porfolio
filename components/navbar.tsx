@@ -41,7 +41,7 @@ export default function Navbar() {
                     <img src="/logofinal.png" alt="Logo" width={50} height={50} sizes="cover"
                     /></Link>
                     <div className="leading-none">
-                        <h1 className="text-xl font-bold text-white tracking-wider">ArisDev</h1>
+                        <h1 className="text-xl font-bold text-white tracking-wider">Aris<span className="text-yellow-400">Dev</span></h1>
                         <h3 className="text-sm font-medium text-slate-400">Solutions digitales claires, utiles et orientées résultat</h3>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ export default function Navbar() {
                             <li key={link.href}>
                                 <Link
                                     href={link.href}
-                                    className={`relative py-2 transition-all duration-300 group ${
+                                    className={`relative py-2 transition-all duration-300 group  ${
                                         isActive 
                                             ? "text-yellow-400" 
                                             : "text-slate-300 hover:text-white"
@@ -103,7 +103,7 @@ export default function Navbar() {
                                 <Link
                                     href={link.href}
                                     onClick={handleLinkClick}
-                                    className={`transition-colors duration-200 text-3xl p-2 rounded-lg ${
+                                    className={`transition-colors duration-200 text-3xl p-2 rounded-lg ${link.href === '/contact' ? 'cta-animate' : ''} ${
                                         isActive 
                                             ? "text-yellow-400 bg-slate-800/50" 
                                             : "text-slate-200 hover:text-yellow-400 hover:bg-slate-800/30"

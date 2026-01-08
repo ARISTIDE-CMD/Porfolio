@@ -155,7 +155,7 @@ export default function Services() {
         </div>
 
         <div className="text-center mt-10">
-          <a href="/contact" className="inline-block bg-yellow-400 text-slate-900 font-bold px-6 py-3 rounded-full shadow hover:bg-yellow-300 transition">Discutons de votre projet</a>
+          <a href="/contact" className="inline-block cta-animate bg-yellow-400 text-slate-900 font-bold px-6 py-3 rounded-full shadow hover:bg-yellow-300 transition">Discutons de votre projet</a>
         </div>
       </div>
 

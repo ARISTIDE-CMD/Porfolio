@@ -15,6 +15,12 @@ const categories = [
         image: '/Delivery/web_design.jpeg'
     },
     {
+        title: 'Formations',
+        desc: 'Ateliers & coaching',
+        href: '/services/formations',
+        image: '/Delivery/Gérer des projets complexes avec Microsoft Planner.jpeg'
+    },
+    {
         title: 'Produits digitaux',
         desc: 'Templates & kits',
         href: '/services/produitsdigitaux',
@@ -25,13 +31,7 @@ const categories = [
         desc: 'Monitoring & sécurité',
         href: '/services/maintenance',
         image: '/Delivery/Custom DevOps for Your Business.jpeg'
-    },
-    {
-        title: 'Formations',
-        desc: 'Ateliers & coaching',
-        href: '/services/formations',
-        image: '/Delivery/Gérer des projets complexes avec Microsoft Planner.jpeg'
-    },
+    }
 ];
 
 // Composant Header

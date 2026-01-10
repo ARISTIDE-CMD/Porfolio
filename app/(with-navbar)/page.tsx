@@ -57,7 +57,7 @@ export default function HeroSection() {
 
               {/* CTA Secondaire : Découverte de l'expertise */}
               <Link
-                href="/services"
+                href="/services/formations"
                 className="inline-flex items-center justify-center px-10 py-4 rounded-full border border-slate-600 text-slate-200 font-medium hover:border-yellow-400 hover:text-yellow-400 transition"
               >
                 Découvrir notre expertise

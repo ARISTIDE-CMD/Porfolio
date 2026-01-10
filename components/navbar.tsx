@@ -52,7 +52,7 @@ export default function Navbar() {
                 {/* Bouton menu mobile */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden p-2 text-yellow-400 bg-slate-800 rounded-lg focus:outline-none hover:bg-slate-700 transition-colors"
+                    className="md:hidden p-2 text-yellow-400  z-50 bg-slate-800 rounded-lg focus:outline-none hover:bg-slate-700 transition-colors"
                     aria-label="Toggle navigation"
                 >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}

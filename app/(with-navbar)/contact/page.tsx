@@ -12,9 +12,6 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-
-
-
 export default function ContactSection() {
   const [state, handleSubmit] = useForm("xyzbrllo");
 

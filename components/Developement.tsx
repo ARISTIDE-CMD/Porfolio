@@ -1,11 +1,35 @@
 "use client";
 
 import Link from 'next/link';
+import { useRouter } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
+
+
 
 export default function DeveloppementPage() {
+  const router = useRouter();
   return (
     <main className="relative overflow-hidden ">
       {/* Background */}
+      <Link 
+      href="/services"
+      // onClick={goBack}
+                      className=" hidden lg:flex
+          absolute top-5 left-8 z-40
+          flex items-center gap-2
+          text-slate-200
+          px-4 py-2 rounded-xl
+      border border-white-700/40
+        hover:opacity-50 hover:text-yellow-400
+          transition-all duration-300
+        "
+                      aria-label="Retour"
+                  >
+                      <ArrowLeft size={18} />
+                      <span className="hidden sm:inline text-sm font-semibold">
+                          
+                      </span>
+                  </Link>
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-cover bg-top md:bg-center bg-fixed filter blur-sm md:blur-none saturate-110 scale-100 md:scale-105"

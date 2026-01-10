@@ -3,31 +3,34 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
+
 
 const categories = [
-    { 
-        title: 'Développement', 
-        desc: 'Web, mobile, design', 
-        href: '/services/developpement', 
-        image: '/Delivery/web_design.jpeg' 
+    {
+        title: 'Développement',
+        desc: 'Web, mobile, design',
+        href: '/services/developpement',
+        image: '/Delivery/web_design.jpeg'
     },
-    { 
-        title: 'Produits digitaux', 
-        desc: 'Templates & kits', 
-        href: '/services/produitsdigitaux', 
-        image: '/Delivery/app_stock.jpeg' 
+    {
+        title: 'Produits digitaux',
+        desc: 'Templates & kits',
+        href: '/services/produitsdigitaux',
+        image: '/Delivery/app_stock.jpeg'
     },
-    { 
-        title: 'Maintenance', 
-        desc: 'Monitoring & sécurité', 
-        href: '/services/maintenance', 
-        image: '/Delivery/Custom DevOps for Your Business.jpeg' 
+    {
+        title: 'Maintenance',
+        desc: 'Monitoring & sécurité',
+        href: '/services/maintenance',
+        image: '/Delivery/Custom DevOps for Your Business.jpeg'
     },
-    { 
-        title: 'Formations', 
-        desc: 'Ateliers & coaching', 
-        href: '/services/formations', 
-        image: '/Delivery/Gérer des projets complexes avec Microsoft Planner.jpeg' 
+    {
+        title: 'Formations',
+        desc: 'Ateliers & coaching',
+        href: '/services/formations',
+        image: '/Delivery/Gérer des projets complexes avec Microsoft Planner.jpeg'
     },
 ];
 
@@ -56,6 +59,8 @@ const categories = [
 export default function ServicesPage() {
     const cardsRef = React.useRef<(HTMLElement | null)[]>([]);
     const [visibleCards, setVisibleCards] = React.useState<Set<number>>(new Set());
+    const router = useRouter();
+
 
     React.useEffect(() => {
         const observers = cardsRef.current.map((card, index) => {
@@ -85,7 +90,27 @@ export default function ServicesPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
             {/* <Header /> */}
-            
+            {/* Bouton retour */}
+            <Link 
+      href="/"
+      // onClick={goBack}
+                      className=" hidden lg:flex
+          absolute top-25 left-8 z-40
+          flex items-center gap-2
+          text-slate-200
+          px-4 py-2 rounded-xl
+      border border-slate-700/40
+        hover:opacity-50 hover:text-yellow-400
+          transition-all duration-300
+        "
+                      aria-label="Retour"
+                  >
+                      <ArrowLeft size={18} />
+                      <span className="hidden sm:inline text-sm font-semibold">
+                          
+                      </span>
+                  </Link>
+
             <main className="container mx-auto px-6 py-4">
                 {/* Hero Section */}
                 <section className="text-center mb-16 animate-fade-in-down">
@@ -103,20 +128,19 @@ export default function ServicesPage() {
                         <article
                             key={cat.title}
                             ref={(el) => { cardsRef.current[index] = el; }}
-                            className={`group relative rounded-2xl overflow-hidden h-80 bg-slate-800 shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
-                                visibleCards.has(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                            }`}
-                            style={{ 
-                                transitionDelay: visibleCards.has(index) ? `${index * 120}ms` : '0ms' 
+                            className={`group relative rounded-2xl overflow-hidden h-80 bg-slate-800 shadow-2xl transition-all duration-500 hover:-translate-y-2 ${visibleCards.has(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                                }`}
+                            style={{
+                                transitionDelay: visibleCards.has(index) ? `${index * 120}ms` : '0ms'
                             }}
                         >
                             {/* Image de fond */}
                             <div className="absolute inset-0">
-                                <Image 
-                                    src={cat.image} 
-                                    alt={cat.title} 
-                                    fill 
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                                <Image
+                                    src={cat.image}
+                                    alt={cat.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                             </div>
@@ -133,8 +157,8 @@ export default function ServicesPage() {
                                 </div>
 
                                 <div className="flex justify-end">
-                                    <Link 
-                                        href={cat.href} 
+                                    <Link
+                                        href={cat.href}
                                         className="inline-flex items-center gap-2 bg-yellow-400 text-slate-900 font-bold px-4 py-2 rounded-xl shadow-lg hover:bg-yellow-300 hover:shadow-yellow-400/50 transition-all hover:gap-3"
                                     >
                                         Voir
@@ -148,11 +172,11 @@ export default function ServicesPage() {
 
                 {/* CTA Section */}
                 <section className="text-center mt-16 animate-fade-in">
-                    <Link 
-                        href="/contact" 
+                    <Link
+                        href="/contact"
                         className="inline-block cta-animate bg-yellow-400 text-slate-900 font-extrabold text-lg text-white px-10 py-3 rounded-lg shadow-2xl hover:bg-yellow-300 hover:shadow-yellow-400/50 transition-all hover:-translate-y-1"
                     >
-                       Décrivez-nous votre besoin
+                        Décrivez-nous votre besoin
                     </Link>
                 </section>
             </main>

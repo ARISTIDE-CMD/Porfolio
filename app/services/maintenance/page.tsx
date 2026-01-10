@@ -1,3 +1,4 @@
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -10,6 +11,25 @@ export const metadata = {
 export default function MaintenancePage() {
   return (
     <main className="relative overflow-hidden">
+      <Link 
+      href="/services"
+      // onClick={goBack}
+                      className=" hidden lg:flex
+          absolute top-5 left-8 z-40
+          flex items-center gap-2
+          text-slate-200
+          px-4 py-2 rounded-xl
+      border border-white-700/40
+        hover:opacity-50 hover:text-yellow-400
+          transition-all duration-300
+        "
+                      aria-label="Retour"
+                  >
+                      <ArrowLeft size={18} />
+                      <span className="hidden sm:inline text-sm font-semibold">
+                          
+                      </span>
+                  </Link>
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-top md:bg-center md:bg-fixed filter blur-sm md:blur-none saturate-110"
@@ -136,14 +156,14 @@ export default function MaintenancePage() {
               </a>
 
 
-              <span
+              {/* <span
                 title="Offres non disponibles pour le moment"
-                className="inline-flex items-center gap-2 px-5 py-2 rounded-md 
+                className="hidden inline-flex items-center gap-2 px-5 py-2 rounded-md 
              bg-yellow-400 text-slate-900 font-semibold 
              hover:opacity-50 cursor-not-allowed relative group"
               >
                 Voir nos offres & contacts
-              </span>
+              </span> */}
             </div>
           </div>
         </section>

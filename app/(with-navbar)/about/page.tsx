@@ -17,38 +17,31 @@ export default function About() {
 
         {/* Contenu */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-24 items-center">
-          
+
           {/* Texte */}
           <div className="space-y-8 animate-slideLeft">
             <p className="text-lg md:text-xl leading-relaxed">
-              <span className="text-yellow-400 font-semibold">ArisDev</span> est
-              une entité orientée vers la{" "}
-              <span className="text-yellow-400 font-semibold">
-                conception de solutions numériques solides
-              </span>
-              , modernes et évolutives.
+              <span className="text-yellow-400 font-semibold">ArisDev</span> conçoit des solutions numériques
+              performantes, solides et évolutives pour répondre aux besoins réels des
+              entreprises et des projets ambitieux.
             </p>
-
-            <p className="text-lg md:text-xl leading-relaxed">
-              L’approche repose sur une vision claire de l’architecture
-              logicielle, allant du développement d’applications web et
-              mobiles à la structuration de systèmes complexes, capables
-              de supporter la croissance et l’évolution des produits
-              numériques.
+            <hr className="opacity-50"></hr>
+            <p className="text-lg md:text-xl leading-relaxed opacity-75">
+              Nous créons des plateformes web et mobiles qui ne se contentent pas
+              d’exister, mais qui résolvent des problèmes métiers précis, améliorent
+              l’efficacité opérationnelle et renforcent la valeur offerte aux utilisateurs.
             </p>
-
-            <p className="text-lg md:text-xl leading-relaxed">
-              ArisDev accorde une importance particulière à la qualité du
-              code, à la maintenabilité et à l’automatisation des
-              déploiements, en intégrant progressivement des pratiques
-              DevOps pour garantir fiabilité, performance et continuité
-              des services.
+            <hr></hr>
+            <p className="text-lg md:text-xl leading-relaxed opacity-50">
+              Grâce à une vision claire de l’architecture logicielle, à une rigueur
+              professionnelle dans le code et à une stratégie de déploiement automatisée,
+              chaque projet est pensé pour être fiable, performant et évolutif.
             </p>
 
             <p className="text-lg md:text-xl italic text-slate-400">
-              Construire aujourd’hui des systèmes pensés pour durer
-              demain.
+              Plus qu’un développeur, un partenaire technique orienté vers la réussite de vos objectifs.
             </p>
+
 
             <a
               href="/présentation.pdf"

@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   title: "Arisdev",
   description: "Solutions digitales claires, utiles et orientées résultat",
   icons: {
-    icon: "/logofinal.png",
-    apple: "/logofinal.png",
+    icon: "/reference.png",
+    apple: "/reference.png",
   },
   themeColor: "#0f172a",
 };

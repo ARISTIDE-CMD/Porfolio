@@ -91,7 +91,7 @@ export default function AboutSection() {
             L'excellence technique au service de votre rentabilité
           </p>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Plus qu'une agence, nous sommes votre **bras droit technologique**. Nous aidons les entreprises et les créateurs à briser le plafond de verre du numérique grâce à des solutions <span className="text-yellow-400 font-semibold">robustes, rapides et génératrices de valeur</span>.
+            Plus qu'une agence, nous sommes votre <strong>bras droit technologique</strong>. Nous aidons les entreprises et les créateurs à briser le plafond de verre du numérique grâce à des solutions <span className="text-yellow-400 font-semibold">robustes, rapides et génératrices de valeur</span>.
           </p>
         </div>
 
@@ -105,7 +105,7 @@ export default function AboutSection() {
               La technologie doit être un moteur de croissance, pas un frein.
             </p>
             <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
-              Nous avons supprimé le jargon complexe pour nous concentrer sur l'essentiel : **vos résultats**. Notre méthode repose sur une architecture solide et une transparence totale.
+              Nous avons supprimé le jargon complexe pour nous concentrer sur l'essentiel : <strong>vos résultats</strong>. Notre méthode repose sur une architecture solide et une transparence totale.
             </p>
           </div>
 
@@ -229,17 +229,17 @@ export default function AboutSection() {
               Ne laissez pas la complexité technique freiner vos ambitions. Discutons de vos objectifs et voyons comment nous pouvons les atteindre ensemble.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a
+              {/* <a
                 href="/contact"
                 className="bg-yellow-400 text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all shadow-xl shadow-yellow-400/10"
               >
-                Démarrer une collaboration
-              </a>
+                
+              </a> */}
               <a
-                href="/portfolio"
+                href="/contact"
                 className="border border-gray-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-800 transition-all"
               >
-                Voir nos succès
+                Démarrer une collaboration
               </a>
             </div>
           </div>

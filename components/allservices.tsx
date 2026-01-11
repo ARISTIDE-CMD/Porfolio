@@ -18,7 +18,7 @@ const categories = [
         title: 'Formations',
         desc: 'Ateliers & coaching',
         href: '/services/formations',
-        image: '/Delivery/Gérer des projets complexes avec Microsoft Planner.jpeg'
+        image: '/coaching.jpeg'
     },
     {
         title: 'Produits digitaux',

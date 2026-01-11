@@ -127,7 +127,7 @@ export default function DeveloppementPage() {
                   </p>
                 </div>
 
-                <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-yellow-400">
+                <span className="mt-8 self-start inline-flex items-start bg-yellow-400 text-slate-900 gap-2 text-sm font-semibold p-3 rounded-lg hover:bg-yellow-300 transition">
                   Découvrir →
                 </span>
               </Link>
